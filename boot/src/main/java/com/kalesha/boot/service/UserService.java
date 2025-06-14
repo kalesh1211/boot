@@ -61,7 +61,7 @@ public class UserService {
                     return userRepository.save(user);
                 })
                 .orElse(null);
-=======
+
         return userRepository.findById(id).map(user -> {
             user.setName(updatedUser.getName());
             user.setEmail(updatedUser.getEmail());
