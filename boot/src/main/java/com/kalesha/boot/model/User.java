@@ -1,15 +1,8 @@
 package com.kalesha.boot.model;
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 public class User {
     private Long id;
     private String name;
     private String email;
-
-=======
->>>>>>> f21b84393fe6dea1f58e6958576a440afd22400d
 import jakarta.persistence.*;
 
 @Entity
@@ -30,28 +23,14 @@ public class User {
         this.email = email;
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> f1f52ed (Initial commit of Spring Boot project with CRUD functionality)
->>>>>>> f21b84393fe6dea1f58e6958576a440afd22400d
-    // Getters and setters
     public Long getId() {
         return id;
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f21b84393fe6dea1f58e6958576a440afd22400d
     public void setId(Long id) {
         this.id = id;
     }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f1f52ed (Initial commit of Spring Boot project with CRUD functionality)
->>>>>>> f21b84393fe6dea1f58e6958576a440afd22400d
     public String getName() {
         return name;
     }
@@ -67,10 +46,9 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-<<<<<<< HEAD
+
 }
-=======
-<<<<<<< HEAD
+
 }
 =======
 }
