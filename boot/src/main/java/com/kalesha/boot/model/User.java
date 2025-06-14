@@ -50,7 +50,5 @@ public class User {
 }
 
 }
-=======
+
 }
->>>>>>> f1f52ed (Initial commit of Spring Boot project with CRUD functionality)
->>>>>>> f21b84393fe6dea1f58e6958576a440afd22400d
