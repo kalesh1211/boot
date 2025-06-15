@@ -1,30 +1,6 @@
 package com.kalesha.boot.service;
 
 import com.kalesha.boot.model.User;
-<<<<<<< HEAD
-import org.springframework.stereotype.Service;
-
-import java.util.Arrays;
-import java.util.List;
-
-@Service
-public class UserService {
-    public List<User> getAllUsers() {
-        return Arrays.asList(
-            createUser(1L, "Kalesha", "kalesha@example.com"),
-            createUser(2L, "John", "john@example.com")
-        );
-    }
-
-    private User createUser(Long id, String name, String email) {
-        User user = new User();
-        user.setId(id);
-        user.setName(name);
-        user.setEmail(email);
-        return user;
-    }
-}
-=======
 import com.kalesha.boot.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -40,6 +16,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    // CRUD Operations
     public User createUser(User user) {
         return userRepository.save(user);
     }
@@ -53,15 +30,25 @@ public class UserService {
     }
 
     public User updateUser(Long id, User updatedUser) {
-        return userRepository.findById(id).map(user -> {
-            user.setName(updatedUser.getName());
-            user.setEmail(updatedUser.getEmail());
-            return userRepository.save(user);
-        }).orElse(null);
+        return userRepository.findById(id)
+                .map(user -> {
+                    user.setName(updatedUser.getName());
+                    user.setEmail(updatedUser.getEmail());
+                    return userRepository.save(user);
+                })
+                .orElse(null);
     }
 
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
+
+
+    private User createUser(Long id, String name, String email) {
+        User user = new User();
+        user.setId(id);
+        user.setName(name);
+        user.setEmail(email);
+        return user;
+    }
 }
->>>>>>> f1f52ed (Initial commit of Spring Boot project with CRUD functionality)

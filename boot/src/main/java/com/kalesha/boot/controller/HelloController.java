@@ -2,20 +2,12 @@ package com.kalesha.boot.controller;
 
 import com.kalesha.boot.model.User;
 import com.kalesha.boot.service.UserService;
-<<<<<<< HEAD
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
-
-@RestController
-=======
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
->>>>>>> f1f52ed (Initial commit of Spring Boot project with CRUD functionality)
 public class HelloController {
 
     private final UserService userService;
@@ -24,18 +16,11 @@ public class HelloController {
         this.userService = userService;
     }
 
-<<<<<<< HEAD
     @GetMapping("/")
     public String hello() {
         return "Hello, Kalesha!";
     }
 
-    @GetMapping("/users")
-    public List<User> getUsers() {
-        return userService.getAllUsers();
-    }
-}
-=======
     @PostMapping
     public User createUser(@RequestBody User user) {
         return userService.createUser(user);
@@ -61,4 +46,3 @@ public class HelloController {
         userService.deleteUser(id);
     }
 }
->>>>>>> f1f52ed (Initial commit of Spring Boot project with CRUD functionality)
