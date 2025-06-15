@@ -1,5 +1,12 @@
 package com.kalesha.boot.model;
+<<<<<<< HEAD
 
+=======
+public class User {
+    private Long id;
+    private String name;
+    private String email;
+>>>>>>> 595b5e38512c21fabff9cffb18d055539a5f7525
 import jakarta.persistence.*;
 
 @Entity
@@ -20,7 +27,10 @@ public class User {
         this.email = email;
     }
 
+<<<<<<< HEAD
     // Getters and setters
+=======
+>>>>>>> 595b5e38512c21fabff9cffb18d055539a5f7525
     public Long getId() {
         return id;
     }
@@ -44,4 +54,13 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+<<<<<<< HEAD
 }
+=======
+
+}
+
+}
+
+}
+>>>>>>> 595b5e38512c21fabff9cffb18d055539a5f7525
